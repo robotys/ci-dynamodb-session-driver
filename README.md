@@ -23,6 +23,9 @@ need to set AWS access key and secret to your configuration file.
 Open `application/config/sess_dynamo.php` and, set appropriate credentials to
 "sess_dynamo_key" and "sess_dynamo_secret".
 
+### DynamoDB Table
+Please create DynamoDB Table first with table name = sess_save_path. For this example, go to DynamoDB > Table > Create Table and use table name 'my_session' and make sure the partition key = 'id' and key type 'string'. Otherwise it will not work.
+
 ## Installation
 
 Copy the application/libraries/Session/drivers/Session_dynamodb_driver.php
